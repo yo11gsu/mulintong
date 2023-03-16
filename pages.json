@@ -1,0 +1,229 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+			"path": "pages/sys/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		//社区新闻
+		{
+			"path": "pages/sys/msg/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		//社区信息
+		{
+			"path": "pages/sys/user/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#5b95ff",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/sys/chat/index",
+			"style": {
+				"navigationBarTitleText": "睦邻议事"
+			}
+		},
+		//随手拍
+		{
+			"path": "pages/sys/photo/index",
+			"style": {
+				"navigationBarTitleText": "随手拍"
+
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "page_photo",
+			"pages": [{
+					"path": "modifySquare",
+					"style": {
+						"navigationBarTitleText": "整改广场"
+					}
+				},
+				{
+					"path": "photoDetail",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "takePhoto",
+					"style": {
+						"navigationBarTitleText": "我要拍"
+					}
+				},
+				{
+					"path": "havaTakePhoto",
+					"style": {
+						"navigationBarTitleText": "我已拍",
+						"enablePullDownRefresh": true
+					}
+				}
+			]
+		},
+		{
+			"root": "page_msg",
+			"pages": [{
+				"path": "newsDetail",
+				"style": {
+					"navigationBarTitleText": "详情"
+				}
+			}]
+		},
+		{
+			"root": "page_login",
+			"pages": [{
+					"path": "secret",
+					"style": {
+						"navigationBarTitleText": "用户协议与隐私政策"
+					}
+				},
+				//用户信息初始化
+				{
+					"path": "InfoIniti",
+					"style": {
+						"navigationBarTitleText": "用户个人信息"
+					}
+				},
+				{
+					"path": "AddressInit",
+					"style": {
+						"navigationBarTitleText": "用户地址信息"
+					}
+				}
+			]
+		},
+		{
+			"root": "page_user",
+			"pages": [{
+					"path": "info",
+					"style": {
+						"navigationBarTitleText": "个人信息"
+					}
+				},
+				{
+					"path": "InfoModify",
+					"style": {
+						"navigationBarTitleText": "个人信息修改"
+					}
+				},
+				{
+					"path": "communityinfo",
+					"style": {
+						"navigationBarTitleText": "睦邻信息"
+					}
+				},
+				//社区信息修改
+				{
+					"path": "community_modify",
+					"style": {
+						"navigationBarTitleText": "睦邻信息修改"
+					}
+				},
+				{
+					"path": "detail",
+					"style": {
+						"navigationBarTitleText": "睦邻信息"
+					}
+				},
+				//社区信息新增
+				{
+					"path": "community_add",
+					"style": {
+						"navigationBarTitleText": "睦邻信息新增"
+					}
+				}
+			]
+		},
+		{
+			"root": "page_chat",
+			"pages": [{
+					"path": "groupChat",
+					"style": {
+						"navigationBarTitleText": "睦邻议事",
+						"navigationBarBackgroundColor": "#F3F4F7",
+						"enablePullDownRefresh": true
+					}
+				}, {
+					"path": "Detail",
+					"style": {
+						"navigationBarTitleText": "详情"
+					}
+				},
+				{
+					"path": "Add",
+					"style": {
+						"navigationBarTitleText": "发起议事"
+					}
+				},
+				{
+					"path": "Modify",
+					"style": {
+						"navigationBarTitleText": "修改议事"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F3F4F7",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#454750",
+		"selectedColor": "#618DFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F7F7",
+		"list": [{
+				"pagePath": "pages/sys/msg/index",
+				"iconPath": "static/aidex/tabbar/msg_1.png",
+				"selectedIconPath": "static/aidex/tabbar/msg_2.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/sys/chat/index",
+				"iconPath": "static/aidex/tabbar/apply_1.png",
+				"selectedIconPath": "static/aidex/tabbar/apply_2.png",
+				"text": "睦邻议事"
+			},
+			{
+				"pagePath": "pages/sys/photo/index",
+				"iconPath": "static/aidex/tabbar/book_1.png",
+				"selectedIconPath": "static/aidex/tabbar/book_2.png",
+				"text": "随手拍"
+			},
+			{
+				"pagePath": "pages/sys/user/index",
+				"iconPath": "static/aidex/tabbar/my_1.png",
+				"selectedIconPath": "static/aidex/tabbar/my_2.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}
